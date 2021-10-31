@@ -14,5 +14,5 @@ Ext.application({
     ],
 
     // The name of the initial view to create.
-    mainView: 'DashboardApp.view.main.Main'
+    mainView: 'DashboardApp.view.base.Dashboard'
 });
