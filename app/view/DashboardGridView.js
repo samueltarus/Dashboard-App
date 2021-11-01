@@ -5,13 +5,29 @@ Ext.define('DashboardApp.view.DashboardGridView',{
     scrollable: true,
     border: true, 
     loadMask: true,
-    stripeRows: true,   
-    columnLines: true,
+    width: 840,
+    grouped: true,
+    height: 450,
+    frame: true,
+    title: 'Server Responses',
+    iconCls: 'icon-grid',
+    plugins: {
+            cellediting: {
+                clicksToEdit: 1
+            }
+        },
 
     reference:'dashboardgridview',
     store: {
         type: 'server'
     },
+    features: [{
+        id: 'group',
+        ftype: 'groupingsummary',
+        groupHeaderTpl: '{name}',
+        hideGroupedHeader: true,
+        enableGroupingMenu: false
+    }],
     viewModel:{
         // type: 'dashboadgridviewmodel',           
     },   
@@ -73,48 +89,82 @@ Ext.define('DashboardApp.view.DashboardGridView',{
         },
     ],
     columns: [
-
+        {
+            text: 'Status',
+            flex: 1,
+            tdCls: 'url',
+            sortable: true,
+            dataIndex: 'Status',
+            hideable: false,
+            summaryType: 'count',
+            summaryRenderer: function(value, summaryData, dataIndex) {
+                return ((value === 0 || value > 1) ? '(' + value + ' Status)' : '(1 Status)');
+            }
+        },
         {
              text: 'IP', 
                 dataIndex: 'IP', 
-                flex: 1 },
+                flex: 1 ,
+                summaryType: 'sum',
+                renderer: function(value, metaData, record, rowIdx, colIdx, store, view) {
+                    return value + ' IP';
+                },
+                summaryRenderer: function(value, summaryData, dataIndex) {
+                    return value + ' Status';
+                },
+            },
         { 
-            text: 'TIME',
-             dataIndex: 'TIME',
-              flex: 1
+            text: 'Time',
+            dataIndex: 'Time',
+             flex: 1,
          },
         {
             text: 'URL',
             dataIndex: 'URL',
             flex: 1,
+            summaryType: 'sum',
+              renderer: function(value, metaData, record, rowIdx, colIdx, store, view) {
+                  return value + ' URL';
+              },
+              summaryRenderer: function(value, summaryData, dataIndex) {
+                  return value + ' URL';
+              },
             editor: {
                 xtype: 'textfield',
                 allowBlank: false
-            }
+            },
+            
         },
         {
-            text: 'STATUS',
-            dataIndex: 'STATUS',
-            flex: 1
+            text: 'Status',
+            dataIndex: 'Status',
+            flex: 1,
+            summaryType: 'count',
+            summaryRenderer: function(value, summaryData, dataIndex) {
+                return ((value === 0 || value > 1) ? '(' + value + ' Status)' : '(1 Status)');
+            }, 
+             summaryType: function(records, values) {
+                var i = 0,
+                    length = records.length,
+                    total = 0,
+                    record;
+
+                for (; i < length; ++i) {
+                    record = records[i];
+                    total += record.get('Status') * record.get('Status');
+                }
+
+                return total;
+            },
         },
     ],
     selModel: {
         selType: 'checkboxmodel',
-        mode: 'MULTI',
-
-    },
-    selModel: 'rowmodel',
-    // plugins: {
-    //     ptype: 'rowediting',
-    //     clicksToEdit: 1
-    // },
-    bbar: [{
-        xtype: 'pagingtoolbar',
-        displayInfo: true,
-    }],
-    selModel: {
-        selType: 'checkboxmodel',
         mode: 'SINGLE',
 
+    },   
+    bbar: {
+        xtype: 'pagingtoolbar',
+        displayInfo: true
     },
 });
