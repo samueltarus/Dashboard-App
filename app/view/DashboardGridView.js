@@ -3,9 +3,9 @@ Ext.define('DashboardApp.view.DashboardGridView',{
     xtype: 'dashboardgridview',
     // controller: 'dashboardgridviewcontroller',
     scrollable: true,
-    border: true, 
+    border: true,
     loadMask: true,
-    stripeRows: true,   
+    stripeRows: true,
     columnLines: true,
 
     reference:'dashboardgridview',
@@ -13,15 +13,15 @@ Ext.define('DashboardApp.view.DashboardGridView',{
         type: 'server'
     },
     viewModel:{
-        // type: 'dashboadgridviewmodel',           
-    },   
+        // type: 'dashboadgridviewmodel',
+    },
 
     bind: {
         title: '{myTitle}',
     },
     // title: 'Comments Management',
-    
-    
+
+
     tbar: [{
             text: 'Add  Request',
             handler: 'addCommentButtonClick',
@@ -75,10 +75,10 @@ Ext.define('DashboardApp.view.DashboardGridView',{
     columns: [
 
         {
-             text: 'IP', 
-                dataIndex: 'IP', 
+             text: 'IP',
+                dataIndex: 'IP',
                 flex: 1 },
-        { 
+        {
             text: 'TIME',
              dataIndex: 'TIME',
               flex: 1

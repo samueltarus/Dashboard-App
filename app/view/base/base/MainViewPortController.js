@@ -65,7 +65,7 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
     //             title: 'comments',
     //             closable: true,
     //         });
-            
+
     //     }
     //     center.setActiveItem(newItem);
 
@@ -76,31 +76,37 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
             center = viewport.lookupReference('center');
         // console.log(center);
     },
-    
+
     onLogoutClick: function () {
         var me=this;
-        Ext.Msg.show({
-            title:'Logout?',
-            message: 'Would you like to Logout?',
-            buttons: Ext.Msg.YESNOCANCEL,
-            icon: Ext.Msg.QUESTION,
-            fn: function(btn) {
-                if (btn === 'yes') {
-                    localStorage.removeItem('logged',false);
+        var view = me.getView();
+        localStorage.removeItem('isLoggedIn');
+        view.destroy();
+        console.log("logout clicked");
+        // Ext.create({
+        //   xtype: 'loginform',
+        // });
+        // Ext.Msg.show({
+        //     title:'Logout?',
+        //     message: 'Would you like to Logout?',
+        //     buttons: Ext.Msg.YESNOCANCEL,
+        //     icon: Ext.Msg.QUESTION,
+        //     fn: function(btn) {
+        //         if (btn === 'yes') {
+        //             localStorage.removeItem('isLoggedIn',false);
+        //                 view.destroy();
+        //              Ext.create({
+        //                     xtype: 'loginform',
+        //             });
+        //         } else if (btn === 'no') {
+        //             console.log('No pressed');
+        //         } else {
+        //             console.log('Cancel pressed');
+        //         }
+        //     }
+        // });
 
-                        me.getView().destroy();
-                     Ext.create({
-                            xtype:"login"
-                    });
-                } else if (btn === 'no') {
-                    console.log('No pressed');
-                } else {
-                    console.log('Cancel pressed');
-                }
-            }
-        });
-        
-    }, 
+    },
     changePassword: function () {
         var me=this;
         Ext.Msg.show({
@@ -121,6 +127,6 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
                 }
             }
         });
-        
+
     }
 });
