@@ -1,6 +1,9 @@
 Ext.define('DashboardApp.view.auth.LoginFormController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.loginformcontroller',
+    mixins: [
+      'DashboardApp.mixins.WindowMixins'
+    ],
     onLoginClick: function(btn) {
       var me = this,
           i = 0,
@@ -12,17 +15,7 @@ Ext.define('DashboardApp.view.auth.LoginFormController', {
       var username = form.findField('username').getValue();
       var password = form.findField('password').getValue();
 
-
-      Ext.MessageBox.show({
-          title: 'Please wait',
-          msg: 'Loading your Details...',
-          progressText: 'Logging in...',
-          width: 300,
-          progress: true,
-          closable: false,
-          animateTarget: btn,
-          // maskClickAction: me.getMaskClickAction()
-      });
+      me.showProgressBar(btn);
 
       // Fake progress fn
       fn = function() {

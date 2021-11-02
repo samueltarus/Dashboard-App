@@ -1,4 +1,3 @@
-
 Ext.define('DashboardApp.view.login.ChangePasswordForm', {
     extend: 'Ext.window.Window',
     xtype: 'changePassword',
