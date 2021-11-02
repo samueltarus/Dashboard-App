@@ -65,7 +65,7 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
     //             title: 'comments',
     //             closable: true,
     //         });
-            
+
     //     }
     //     center.setActiveItem(newItem);
 
@@ -76,7 +76,7 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
             center = viewport.lookupReference('center');
         // console.log(center);
     },
-    
+
     onLogoutClick: function () {
         var me=this;
         Ext.Msg.show({
@@ -86,7 +86,7 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
             icon: Ext.Msg.QUESTION,
             fn: function(btn) {
                 if (btn === 'yes') {
-                    localStorage.removeItem('logged',false);
+                    localStorage.removeItem('isLoggedIn',false);
 
                         me.getView().destroy();
                      Ext.create({
@@ -99,8 +99,8 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
                 }
             }
         });
-        
-    }, 
+
+    },
     changePassword: function () {
         var me=this;
         Ext.Msg.show({
@@ -121,6 +121,6 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
                 }
             }
         });
-        
+
     }
 });

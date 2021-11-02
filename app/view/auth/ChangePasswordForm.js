@@ -11,10 +11,10 @@ Ext.define('DashboardApp.view.login.ChangePasswordForm', {
     closable: false,
     autoShow: true,
 	titleAlign: 'center',
-	height: 400, 
-    width: 400, 
+	height: 400,
+    width: 400,
     layout: 'center',
-    title: 'New Password',      
+    title: 'New Password',
 
     items: {
         xtype: 'form',
@@ -22,13 +22,13 @@ Ext.define('DashboardApp.view.login.ChangePasswordForm', {
         title:"New Password",
         titleAlign: 'center',
         iconCls: 'fa fa-key fa-lg',
-        bodyPadding: 15, 
-        defaults: { 
+        bodyPadding: 15,
+        defaults: {
             xtype: 'textfield',
-            anchor: '100%', 
-            labelWidth: 60 
+            anchor: '100%',
+            labelWidth: 60
         },
-        
+
         items: [
             {
                 xtype: 'textfield',
@@ -47,7 +47,7 @@ Ext.define('DashboardApp.view.login.ChangePasswordForm', {
             inputType: 'password',
             fieldLabel: 'Confirm Password',
             allowBlank: false
-          }            
+          }
         ],
         buttons: [{
             text: 'Update',
@@ -55,17 +55,16 @@ Ext.define('DashboardApp.view.login.ChangePasswordForm', {
             iconCls: 'fas fa-sign-in-alt',
             listeners: {
                 click: 'onChangePasswordClick'
-                 
-                }                
+
+                }
         },{
             text: 'Reset',
             formBind: true,
             listeners: {
                 click: 'onRestClick'
-                 
-                }                
+
+                }
         }]
-	
+
     }
 });
-
