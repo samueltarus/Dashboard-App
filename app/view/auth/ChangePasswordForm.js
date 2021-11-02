@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 Ext.define('DashboardApp.view.auth.Login', {
+=======
+Ext.define('DashboardApp.view.login.ChangePasswordForm', {
+>>>>>>> c02676cf6d133bd6e5f7a0504d9889573737061b
     extend: 'Ext.window.Window',
     xtype: 'changePassword',
     requires: [
