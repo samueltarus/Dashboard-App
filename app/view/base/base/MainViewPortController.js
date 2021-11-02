@@ -90,7 +90,7 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
 
                         me.getView().destroy();
                      Ext.create({
-                            xtype:"login"
+                            xtype: 'loginform'
                     });
                 } else if (btn === 'no') {
                     console.log('No pressed');

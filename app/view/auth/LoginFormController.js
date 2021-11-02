@@ -40,18 +40,13 @@ Ext.define('DashboardApp.view.auth.LoginFormController', {
       me.timer = Ext.defer(fn, 500);
     },
     loginLogic: function (username, password) {
-      // var store = Ext.getStore('users');
-      // var matched = store.queryBy(function(userstore){
-      //   return (record.get('username') == username && record.get('password') == password);
-      // });
 
     },
     onRegisterClick: function () {
-      console.log("register clicked");
+      Ext.widget('userform');
     },
-
-    getMaskClickAction: function() {
-    return this.lookupReference('hideOnMaskClick').getValue() ? 'hide' : 'focus';
-},
+    onCancelClick: function () {
+      console.log("cancel is clicked");
+    }
 
 });
