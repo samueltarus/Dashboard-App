@@ -72,7 +72,7 @@ Ext.define('DashboardApp.view.logs.LogStatisticsView',{
     stores: {
       requests: {
         type: 'requests',
-        autoLoad: false,
+        autoLoad: true,
         listeners: {
           groupchange: 'onGroupChange',
           buffer: 100
