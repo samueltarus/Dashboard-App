@@ -1,4 +1,4 @@
-Ext.define('DashboardApp.view.DashboardGridView',{
+Ext.define('DashboardApp.view.DashboardGridRequestView',{
     extend: 'Ext.grid.Panel',
     xtype: 'dashboardgridview',
     // controller: 'dashboardgridviewcontroller',
