@@ -12,6 +12,7 @@ Ext.define('DashboardApp.view.DashboardGridView',{
     title: 'Server Responses',
     iconCls: 'icon-grid',
     plugins: {
+        gridfilters: true,
             cellediting: {
                 clicksToEdit: 1
             }
@@ -95,6 +96,7 @@ Ext.define('DashboardApp.view.DashboardGridView',{
             tdCls: 'url',
             sortable: true,
             dataIndex: 'Status',
+            
             hideable: false,
             summaryType: 'count',
             summaryRenderer: function(value, summaryData, dataIndex) {
@@ -105,13 +107,15 @@ Ext.define('DashboardApp.view.DashboardGridView',{
              text: 'IP', 
                 dataIndex: 'IP', 
                 flex: 1 ,
+                
                 summaryType: 'sum',
-                renderer: function(value, metaData, record, rowIdx, colIdx, store, view) {
-                    return value + ' IP';
-                },
-                summaryRenderer: function(value, summaryData, dataIndex) {
-                    return value + ' Status';
-                },
+                // renderer: function(value, metaData, record, rowIdx, colIdx, store, view) {
+                //     return value + ' IP';
+                // },
+                summaryType: 'count',
+            summaryRenderer: function(value, summaryData, dataIndex) {
+                return ((value === 0 || value > 1) ? '(' + value + ' IP)' : '(1 Status)');
+            }
             },
         { 
             text: 'Time',
@@ -139,23 +143,29 @@ Ext.define('DashboardApp.view.DashboardGridView',{
             text: 'Status',
             dataIndex: 'Status',
             flex: 1,
+            filter: {
+                type: 'string',
+                itemDefaults: {
+                    emptyText: 'Search for...'
+                }
+            },
             summaryType: 'count',
             summaryRenderer: function(value, summaryData, dataIndex) {
                 return ((value === 0 || value > 1) ? '(' + value + ' Status)' : '(1 Status)');
-            }, 
-             summaryType: function(records, values) {
-                var i = 0,
-                    length = records.length,
-                    total = 0,
-                    record;
+            }
+            //  summaryType: function(records, values) {
+            //     var i = 0,
+            //         length = records.length,
+            //         total = 0,
+            //         record;
 
-                for (; i < length; ++i) {
-                    record = records[i];
-                    total += record.get('Status') * record.get('Status');
-                }
+            //     for (; i < length; ++i) {
+            //         record = records[i];
+            //         total += record.get('Status') * record.get('Status');
+            //     }
 
-                return total;
-            },
+            //     return total;
+            // },
         },
     ],
     selModel: {
