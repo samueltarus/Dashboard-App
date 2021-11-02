@@ -1,6 +1,7 @@
 Ext.define('DashboardApp.view.users.UserForm', {
     extend: 'Ext.window.Window',
     xtype: 'userform',
+    controller: 'userformcontroller',
 
     title: 'USER REGISTRATION FORM',
     bodyPadding: "5 5 0",
@@ -26,18 +27,31 @@ Ext.define('DashboardApp.view.users.UserForm', {
             xtype: 'textfield',
             fieldLabel: 'First Name',
             anchor: '-5',
+            minLength: 5,
             name: 'first'
         }, {
             xtype: 'textfield',
-            fieldLabel: 'Company',
+            fieldLabel: 'Username',
             anchor: '-5',
-            name: 'company'
-        }]
+            minLength: 5,
+            name: 'username',
+            vtype: 'alphanum',
+            maxLength: 8,
+        },
+        {
+          xtype: 'textfield',
+          fieldLabel: 'password',
+          anchor: '-5',
+          name: 'password',
+          vtype: 'customPass'
+        }
+      ]
     }, {
         items: [{
             xtype: 'textfield',
             fieldLabel: 'Last Name',
             anchor: '100%',
+            minLength: 5,
             name: 'last'
         }, {
             xtype: 'textfield',
@@ -45,12 +59,22 @@ Ext.define('DashboardApp.view.users.UserForm', {
             anchor: '100%',
             name: 'email',
             vtype: 'email'
-        }]
+        },
+        {
+          xtype: 'textfield',
+          fieldLabel: 're-type password',
+          anchor: '-5',
+          vtype: 'password',
+          name: 'repassword',
+        }
+      ]
     }],
 
     buttons: ['->', {
-        text: 'Save'
+        text: 'Save',
+        handler: 'onSaveClicked'
     }, {
-        text: 'Cancel'
+        text: 'Cancel',
+        handler: 'onCancelClick'
     }]
 });
