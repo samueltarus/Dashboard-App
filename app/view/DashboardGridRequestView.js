@@ -5,8 +5,18 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
     scrollable: true,
     border: true,
     loadMask: true,
-    stripeRows: true,
-    columnLines: true,
+    width: 840,
+    grouped: true,
+    height: 450,
+    frame: true,
+    title: 'Server Responses',
+    iconCls: 'icon-grid',
+    plugins: {
+        gridfilters: true,
+            cellediting: {
+                clicksToEdit: 1
+            }
+        },
 
     reference:'dashboardgridview',
     store: {
@@ -94,15 +104,6 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
             }
         },
         {
-<<<<<<< HEAD
-             text: 'IP',
-                dataIndex: 'IP',
-                flex: 1 },
-        {
-            text: 'TIME',
-             dataIndex: 'TIME',
-              flex: 1
-=======
              text: 'IP',
                 dataIndex: 'IP',
                 flex: 1 ,
@@ -120,7 +121,6 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
             text: 'Time',
             dataIndex: 'Time',
              flex: 1,
->>>>>>> c02676cf6d133bd6e5f7a0504d9889573737061b
          },
         {
             text: 'URL',
