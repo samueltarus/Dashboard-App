@@ -12,10 +12,12 @@ Ext.define('DashboardApp.store.Server',{
             rootProperty: 'server-request'
         }
     },
+    sorters: {
+         property: 'Time',
+          direction: 'ASC'
+         },
+        groupField: 'Status',
     autoLoad: 'true',
-    sorters: [{
-        property: 'name',
-        direction: 'ASC'
-    }],
     pageSize: 10
+
 });
