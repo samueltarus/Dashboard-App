@@ -1,5 +1,5 @@
-Ext.define('DashboardApp.view.login.ChangePasswordForm', {
-    extend: 'Ext.window.Window',
+
+Ext.define('DashboardApp.view.auth.ChangePasswordForm', {
     xtype: 'changePassword',
     requires: [
         // 'DashboardApp.view.login.LoginController',

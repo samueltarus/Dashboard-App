@@ -11,5 +11,8 @@ Ext.define('DashboardApp.mixins.WindowMixins',{
         closable: false,
         animateTarget: btn,
     });
+  },
+  authentication:function(){
+
   }
 });

@@ -14,14 +14,16 @@ Ext.define('DashboardApp.Application', {
             quickTips: true
         }
     },
-    launch: function(){
-let isLoggedIn;
-if (localStorage.getItem('isLoggedIn')) {
-Ext.widget('mainviewport')
-   }else {
-       Ext.widget('loginform');
-    }
-},
+    launch: function(profile) {
+        let isLoggedIn = localStorage.getItem('isLoggedIn');
+        console.log(typeof isLoggedIn);
+
+        if (isLoggedIn) {
+            Ext.widget('mainviewport');
+        } else {
+            Ext.widget('loginform');
+        }
+    },
     onAppUpdate: function () {
         Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
             function (choice) {
