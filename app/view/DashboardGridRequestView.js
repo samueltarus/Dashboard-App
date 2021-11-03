@@ -3,7 +3,7 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
     xtype: 'dashboardgridview',
     // controller: 'dashboardgridviewcontroller',
     scrollable: true,
-    border: true, 
+    border: true,
     loadMask: true,
     width: 840,
     grouped: true,
@@ -30,15 +30,15 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
         enableGroupingMenu: false
     }],
     viewModel:{
-        // type: 'dashboadgridviewmodel',           
-    },   
+        // type: 'dashboadgridviewmodel',
+    },
 
     bind: {
         title: '{myTitle}',
     },
     // title: 'Comments Management',
-    
-    
+
+
     tbar: [{
             text: 'Add  Request',
             handler: 'addCommentButtonClick',
@@ -96,7 +96,7 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
             tdCls: 'url',
             sortable: true,
             dataIndex: 'Status',
-            
+
             hideable: false,
             summaryType: 'count',
             summaryRenderer: function(value, summaryData, dataIndex) {
@@ -104,10 +104,10 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
             }
         },
         {
-             text: 'IP', 
-                dataIndex: 'IP', 
+             text: 'IP',
+                dataIndex: 'IP',
                 flex: 1 ,
-                
+
                 summaryType: 'sum',
                 // renderer: function(value, metaData, record, rowIdx, colIdx, store, view) {
                 //     return value + ' IP';
@@ -117,7 +117,7 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
                 return ((value === 0 || value > 1) ? '(' + value + ' IP)' : '(1 Status)');
             }
             },
-        { 
+        {
             text: 'Time',
             dataIndex: 'Time',
              flex: 1,
@@ -137,7 +137,7 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
                 xtype: 'textfield',
                 allowBlank: false
             },
-            
+
         },
         {
             text: 'Status',
@@ -172,7 +172,7 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
         selType: 'checkboxmodel',
         mode: 'SINGLE',
 
-    },   
+    },
     bbar: {
         xtype: 'pagingtoolbar',
         displayInfo: true
