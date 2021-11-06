@@ -33,6 +33,12 @@ Ext.define('DashboardApp.store.Menu', {
                 url: 'statistics',
                 iconCls: 'fas fa-superscript',
                 xtype: 'groupedgrid',
+              },
+              {
+                text: 'Status codes summary',
+                leaf: true,
+                iconCls: 'fas fa-superscript',
+                xtype:'statuscodesfilter',
               }
             ]
           }
