@@ -94,4 +94,4 @@ Ext.define('DashboardApp.view.logs.LogStatisticsViewController',{
 
   }
 
-})
+});

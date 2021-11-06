@@ -19,6 +19,8 @@ Ext.define('DashboardApp.view.users.UserForm', {
         flex: 1,
         layout: 'anchor'
     },
+    reference: 'add-form',
+    jsonSubmit: true,
 
     layout: 'hbox',
 

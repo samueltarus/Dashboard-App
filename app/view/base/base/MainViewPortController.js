@@ -112,7 +112,7 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
                 if (btn === 'yes') {
                   me.getView().destroy();
                      Ext.create({
-                            xtype:"changePassword"
+                            xtype:'changePassword'
                     });
                 } else if (btn === 'no') {
                     console.log('No pressed');
