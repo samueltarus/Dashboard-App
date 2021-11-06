@@ -3,33 +3,34 @@
  * calls Ext.application(). This is the ideal place to handle application launch and
  * initialization details.
  */
-Ext.define('DashboardApp.Application', {
-    extend: 'Ext.app.Application',
+ Ext.define('DashboardApp.Application', {
+     extend: 'Ext.app.Application',
 
-    name: 'DashboardApp',
+     name: 'DashboardApp',
 
-    quickTips: false,
-    platformConfig: {
-        desktop: {
-            quickTips: true
-        }
-    },
-    launch: function(){
-let isLoggedIn;
+     quickTips: false,
+     platformConfig: {
+         desktop: {
+             quickTips: true
+         }
+     },
+     launch: function(profile) {
+         let isLoggedIn = localStorage.getItem('isLoggedIn');
+         console.log(typeof isLoggedIn);
 
-    if (localStorage.getItem('isLoggedIn')) {
-            Ext.widget('mainviewport')
-       }else {
-           Ext.widget('loginform');
-        }
-},
-    onAppUpdate: function () {
-        Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
-            function (choice) {
-                if (choice === 'yes') {
-                    window.location.reload();
-                }
-            }
-        );
-    }
-});
+         if (isLoggedIn) {
+             Ext.widget('mainviewport');
+         } else {
+             Ext.widget('loginform');
+         }
+     },
+     onAppUpdate: function () {
+         Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
+             function (choice) {
+                 if (choice === 'yes') {
+                     window.location.reload();
+                 }
+             }
+         );
+     }
+ });

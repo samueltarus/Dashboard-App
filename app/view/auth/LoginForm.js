@@ -2,6 +2,10 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
     extend: 'Ext.window.Window',
     controller: 'loginformcontroller',
     xtype: 'loginform',
+    requires: [
+      'DashboardApp.view.auth.LoginFormController',
+      'Ext.form.Panel'
+  ],
 
     title: 'Login',
     frame: true,
@@ -38,7 +42,7 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
            name: 'password',
            vtype: 'alphanum',
            maxLength: 15,
-           minLength: 4,
+           minLength: 5,
            emptyText: 'password',
            inputType: 'password'
     }
@@ -52,9 +56,9 @@ buttons: [
       iconCls:'fas fa-flag-usa',
       text: 'language'
     },
-    {
-      xtype: 'tbfill'
-    },
+    // {
+    //   xtype: 'tbfill'
+    // },
     {
       text: 'Cancel',
       handler: 'onCancelClick',
@@ -67,6 +71,8 @@ buttons: [
      },
     {
       text: 'Login',
+      formBind: true,
+       iconCls: 'fas fa-sign-in-alt',
       handler: 'onLoginClick',
       iconCls: 'fas fa-sign-in-alt',
     },
