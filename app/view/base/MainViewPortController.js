@@ -10,6 +10,8 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
     routes: {
         'server-requests': 'onServerUrlActivated',
         'statistics': 'onStatisticsActivated',
+        'requestchart': 'onRequestChartStatisticsActivated',
+
         'student-form-panel': {
             before: 'checkIfHasAdminRights',
             action: 'onShowStudentFormPanel',
@@ -94,6 +96,10 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
 
     onServerUrlActivated: function() {
         this.showView("Server Request", "dashboardgridview", "fa fa-list-alt");
+    },
+
+    onRequestChartStatisticsActivated: function() {
+        this.showView("Server Request Chart", "chart", "fa fa-list-alt");
     },
     showView: function(title, xtype, iconCls) {
         //? get hold of the center panel 
