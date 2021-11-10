@@ -1,6 +1,6 @@
 Ext.define('DashboardApp.view.users.UserForm', {
     extend: 'Ext.window.Window',
-    xtype: 'userform',
+    xtype: 'usersform',
     controller: 'userformcontroller',
 
     title: 'USER REGISTRATION FORM',

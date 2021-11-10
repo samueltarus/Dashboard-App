@@ -16,7 +16,6 @@
      },
      launch: function(profile) {
          let isLoggedIn = localStorage.getItem('isLoggedIn');
-         console.log(typeof isLoggedIn);
 
          if (isLoggedIn) {
              Ext.widget('mainviewport');
