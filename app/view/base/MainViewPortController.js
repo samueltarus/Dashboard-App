@@ -16,6 +16,9 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
         'server-requests': 'onServerUrlActivated',
         'statistics': 'onStatisticsActivated',
         'user-sessions-view': 'onUserSessionViewActivated',
+        'user-sessions-pie-chart': 'onUserSessionPieChartActivated',
+
+        
 
       },
 
@@ -29,6 +32,9 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
       },
       onUserSessionViewActivated: function() {
         this.showView("User Sessions", "usersessionview", "fa fa-list-alt");
+      },
+      onUserSessionPieChartActivated: function() {
+        this.showView("User Sessions Pie Chart", "pie-basic", "fa fa-list-alt");
       },
 
 

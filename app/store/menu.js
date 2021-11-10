@@ -73,6 +73,13 @@ Ext.define('DashboardApp.store.Menu', {
                 iconCls: 'fas fa-superscript',
                 url: 'log-chart',
                 xtype:'statuscodesfilter',
+              },
+              {
+                text: 'User Sessions',
+                leaf: true,
+                iconCls: 'fas fa-superscript',
+                url: 'user-sessions-pie-chart',
+                xtype:'pie-basic',
               }
             ]
           },
