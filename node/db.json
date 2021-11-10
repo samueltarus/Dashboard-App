@@ -1,20 +1,7 @@
 {
-<<<<<<< HEAD
 	"users": [
-=======
-  "users": [
-  {
-    "id":1,
-    "name":"hanson"
-  }
-  
-  
-  ],
+	        ],
 
-  "server-request": [
->>>>>>> 79514c0db6b9f9fb309d522a2d00ac72db1b443c
-
-	],
 	"server-request": [
 
 		{

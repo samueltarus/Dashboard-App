@@ -15,59 +15,20 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
     routes: {
         'server-requests': 'onServerUrlActivated',
         'statistics': 'onStatisticsActivated',
-<<<<<<< HEAD
-=======
-        'requestchart': 'onRequestChartStatisticsActivated',
-        },
-    },
-    checkIfHasAdminRights: function() {
-        //* Case 1 => Calling stop/resume on the action
-        //* The function should be receiving the last parameter as
-        //! ACTION
-        // //? make a request to the server to check if the user has the right to access this page.
+      },
 
-        // let hasAccess = false;
-        // if (hasAccess) {
-        //     //? process the request
-        //     action.resume();
-        // } else {
-        //     //? stop the current request
-        //     TrainingJs.Util.showError("You do not have permission to access this page", action);
-        //     action.stop();
-        // }
-
-        //* Case 2 => making use of promises
-        //? return a promise
-
-        return new Promise(function(resolve, reject) {
-            //? make the request to the server to determine if the user is allowed to access this page.
-            let hasAccess = false;
-            //? if successful
-            if (hasAccess) {
-                //? return resolve
-                resolve();
-
-            } else {
-                //! return reject
-                reject("You do not have permission to access this page.");
-            }
-
-        });
-
-
-    },
-
+      
     onServerUrlActivated: function() {
         this.showView("Server Request", "dashboardgridview", "fa fa-list-alt");
     },
-<<<<<<< HEAD
+
     onStatisticsActivated: function() {
         this.showView("Log Statistics", "groupedgrid", "fa fa-list-alt");
-=======
+      },
+
 
     onRequestChartStatisticsActivated: function() {
         this.showView("Server Request Chart", "chart", "fa fa-list-alt");
->>>>>>> 79514c0db6b9f9fb309d522a2d00ac72db1b443c
     },
     showView: function(title, xtype, iconCls) {
         //? get hold of the center panel
