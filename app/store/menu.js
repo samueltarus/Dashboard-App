@@ -30,7 +30,7 @@ Ext.define('DashboardApp.store.Menu', {
               {
                 text: 'General summary',
                 leaf: true,
-                url: 'statistics',
+                // url: 'statistics',
                 iconCls: 'fas fa-superscript',
                 xtype: 'groupedgrid',
               },
@@ -39,6 +39,18 @@ Ext.define('DashboardApp.store.Menu', {
                 leaf: true,
                 iconCls: 'fas fa-superscript',
                 xtype:'statuscodesfilter',
+              }
+            ]
+          },
+          {
+            text: 'User sessions',
+            expanded: false,
+            iconCls: 'fad fa-calculator',
+            children: [
+              {
+                text: 'Session stats',
+                leaf: true,
+                xtype: 'usersessionview',
               }
             ]
           }

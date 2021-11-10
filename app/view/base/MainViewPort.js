@@ -3,7 +3,7 @@ Ext.define('DashboardApp.view.base.MainViewPort', {
     xtype: 'mainviewport',
     layout: 'border',
     controller: 'mainviewportcontroller',
-   
+
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
@@ -23,25 +23,25 @@ Ext.define('DashboardApp.view.base.MainViewPort', {
                 displayField: 'systemModuleName',
                 valueField: 'modulextype',
                 forceSelection: true,
-                queryMode: 'local',                   
-               
+                queryMode: 'local',
+
 
             },
-            '->',               
+            '->',
             {
                 text: 'logout',
-                xtype: 'button',                   
+                xtype: 'button',
                 listeners: {
                     click: 'onLogoutClick'
-                }                  
+                }
             },
             {
                 text: 'Change Password',
                 xtype: 'button',
                 listeners: {
                     click: 'changePassword'
-                }  
-               
+                }
+
             },
         ]
         },
@@ -84,9 +84,9 @@ Ext.define('DashboardApp.view.base.MainViewPort', {
             xtype: 'tabpanel', // TabPanel itself has no title
             activeTab: 0,
             items: [{
-                xtype: 'dashboardgridview'
+                // xtype: 'dashboardgridview'
             }]
-           
+
         }
     ]
 

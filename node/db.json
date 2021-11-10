@@ -1,207 +1,218 @@
 {
-  "users": [
-    
-  ],
-  "server-request": [
+	"users": [
 
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:13:47:16",
-   "URL": "GET /home.php HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:13:47:19",
-   "URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "302"
- },
- {
-   "IP": "10.130.2.1",
-   "Time": "29/11/2017:13:47:20",
-   "URL": "GET /countdown.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.129.2.1",
-   "Time": "29/11/2017:13:49:25",
-   "URL": "GET /details.php?id=44 HTTP/1.1",
-   "Status": "302"
- },
- {
-   "IP": "10.128.2.1",
-   "Time": "29/11/2017:13:49:26",
-   "URL": "GET /countdown.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.128.2.1",
-   "Time": "29/11/2017:13:49:32",
-   "URL": "GET /home.php HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.128.2.1",
-   "Time": "29/11/2017:13:49:34",
-   "URL": "GET /compiler.php HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.128.2.1",
-   "Time": "29/11/2017:13:49:37",
-   "URL": "GET /compiler.php HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:13:51:40",
-   "URL": "GET /logout.php HTTP/1.1",
-   "Status": "302"
- },
- {
-   "IP": "10.129.2.1",
-   "Time": "29/11/2017:13:51:41",
-   "URL": "GET /login.php HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.129.2.1",
-   "Time": "29/11/2017:13:51:44",
-   "URL": "POST /process.php HTTP/1.1",
-   "Status": "302"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:13:51:44",
-   "URL": "GET /home.php HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:13:51:46",
-   "URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:13:51:49",
-   "URL": "GET /details.php?id=44 HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.128.2.1",
-   "Time": "29/11/2017:13:57:04",
-   "URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:04:57",
-   "URL": "GET /details.php?id=44 HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:05:10",
-   "URL": "GET /contest.php HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:05:12",
-   "URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:05:16",
-   "URL": "GET /details.php?id=46 HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:05:22",
-   "URL": "GET /contest.php HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:05:24",
-   "URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:05:28",
-   "URL": "GET /details.php?id=42 HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:05:35",
-   "URL": "GET /contest.php HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:05:37",
-   "URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:06:05",
-   "URL": "GET /details.php?id=45 HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.128.2.1",
-   "Time": "29/11/2017:14:06:10",
-   "URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.0.1",
-   "Time": "29/11/2017:14:31:33",
-   "URL": "GET / HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:33:21",
-   "URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
-   "Status": "200"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:33:22",
-   "URL": "GET /css/bootstrap.min.css HTTP/1.1",
-   "Status": "304"
- },
- {
-   "IP": "10.128.2.1",
-   "Time": "29/11/2017:14:33:22",
-   "URL": "GET /css/font-awesome.min.css HTTP/1.1",
-   "Status": "304"
- },
- {
-   "IP": "10.131.0.1",
-   "Time": "29/11/2017:14:33:22",
-   "URL": "GET /css/normalize.css HTTP/1.1",
-   "Status": "304"
- },
- {
-   "IP": "10.131.2.1",
-   "Time": "29/11/2017:14:33:22",
-   "URL": "GET /css/main.css HTTP/1.1",
-   "Status": "304"
- },
- {
-   "IP": "10.131.0.1",
-   "Time": "29/11/2017:14:33:22",
-   "URL": "GET /css/style.css HTTP/1.1",
-   "Status": "304"
- }
+	],
+	"server-request": [
 
-]
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:13:47:16",
+			"URL": "GET /home.php HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:13:47:19",
+			"URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "302"
+		},
+		{
+			"IP": "10.130.2.1",
+			"Time": "29/11/2017:13:47:20",
+			"URL": "GET /countdown.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.129.2.1",
+			"Time": "29/11/2017:13:49:25",
+			"URL": "GET /details.php?id=44 HTTP/1.1",
+			"Status": "302"
+		},
+		{
+			"IP": "10.128.2.1",
+			"Time": "29/11/2017:13:49:26",
+			"URL": "GET /countdown.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.128.2.1",
+			"Time": "29/11/2017:13:49:32",
+			"URL": "GET /home.php HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.128.2.1",
+			"Time": "29/11/2017:13:49:34",
+			"URL": "GET /compiler.php HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.128.2.1",
+			"Time": "29/11/2017:13:49:37",
+			"URL": "GET /compiler.php HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:13:51:40",
+			"URL": "GET /logout.php HTTP/1.1",
+			"Status": "302"
+		},
+		{
+			"IP": "10.129.2.1",
+			"Time": "29/11/2017:13:51:41",
+			"URL": "GET /login.php HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.129.2.1",
+			"Time": "29/11/2017:13:51:44",
+			"URL": "POST /process.php HTTP/1.1",
+			"Status": "302"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:13:51:44",
+			"URL": "GET /home.php HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:13:51:46",
+			"URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:13:51:49",
+			"URL": "GET /details.php?id=44 HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.128.2.1",
+			"Time": "29/11/2017:13:57:04",
+			"URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:04:57",
+			"URL": "GET /details.php?id=44 HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:05:10",
+			"URL": "GET /contest.php HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:05:12",
+			"URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:05:16",
+			"URL": "GET /details.php?id=46 HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:05:22",
+			"URL": "GET /contest.php HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:05:24",
+			"URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:05:28",
+			"URL": "GET /details.php?id=42 HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:05:35",
+			"URL": "GET /contest.php HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:05:37",
+			"URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:06:05",
+			"URL": "GET /details.php?id=45 HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.128.2.1",
+			"Time": "29/11/2017:14:06:10",
+			"URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.0.1",
+			"Time": "29/11/2017:14:31:33",
+			"URL": "GET / HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:33:21",
+			"URL": "GET /contestproblem.php?name=RUET%20OJ%20Server%20Testing%20Contest HTTP/1.1",
+			"Status": "200"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:33:22",
+			"URL": "GET /css/bootstrap.min.css HTTP/1.1",
+			"Status": "304"
+		},
+		{
+			"IP": "10.128.2.1",
+			"Time": "29/11/2017:14:33:22",
+			"URL": "GET /css/font-awesome.min.css HTTP/1.1",
+			"Status": "304"
+		},
+		{
+			"IP": "10.131.0.1",
+			"Time": "29/11/2017:14:33:22",
+			"URL": "GET /css/normalize.css HTTP/1.1",
+			"Status": "304"
+		},
+		{
+			"IP": "10.131.2.1",
+			"Time": "29/11/2017:14:33:22",
+			"URL": "GET /css/main.css HTTP/1.1",
+			"Status": "304"
+		},
+		{
+			"IP": "10.131.0.1",
+			"Time": "29/11/2017:14:33:22",
+			"URL": "GET /css/style.css HTTP/1.1",
+			"Status": "304"
+		}
+
+	],
+	"sessions": [{
+		"userId": 1,
+		"username": "gss",
+		"browser": "mozilla",
+		"lastLogin": "29/11/2017:14:33:22",
+		"submitMethod": "POST",
+		"cientPortNo": 3306,
+		"serverPortNo": 8080,
+		"ipAddress": "10.131 .0 .1",
+		"status": "Online"
+	}]
 }
