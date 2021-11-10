@@ -16,6 +16,7 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
         'server-requests': 'onServerUrlActivated',
         'statistics': 'onStatisticsActivated',
 <<<<<<< HEAD
+
 =======
         'requestchart': 'onRequestChartStatisticsActivated',
 
@@ -95,20 +96,14 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
 
 
     },
-    onShowStudentFormPanel: function() {
-        console.log("Student new form  was executed");
-        //? show add form panel
-        this.showView('Add Student', 'studentformpanel', 'fa fa-plus-square');
->>>>>>> 79514c0db6b9f9fb309d522a2d00ac72db1b443c
-    },
 
     onServerUrlActivated: function() {
         this.showView("Server Request", "dashboardgridview", "fa fa-list-alt");
     },
-<<<<<<< HEAD
+
     onStatisticsActivated: function() {
         this.showView("Log Statistics", "groupedgrid", "fa fa-list-alt");
-=======
+
 
     onRequestChartStatisticsActivated: function() {
         this.showView("Server Request Chart", "chart", "fa fa-list-alt");
