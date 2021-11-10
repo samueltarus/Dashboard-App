@@ -1,9 +1,8 @@
 Ext.define('DashboardApp.view.requests.RequestGridView',{
     extend: 'Ext.grid.Panel',
     xtype: 'dashboardgridview',
-    // xtype: 'expander-lockable',
     enableLocking: true,
-    // controller: 'dashboardgridviewcontroller',
+    
     scrollable: true,
     border: true, 
     loadMask: true,

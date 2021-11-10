@@ -43,7 +43,7 @@ Ext.define('DashboardApp.store.Menu', {
               {
                 text: 'General summary',
                 leaf: true,
-                // url: 'statistics',
+                url: 'statistics',
                 iconCls: 'fas fa-superscript',
                 xtype: 'groupedgrid',
               },
@@ -84,6 +84,7 @@ Ext.define('DashboardApp.store.Menu', {
               {
                 text: 'Session stats',
                 leaf: true,
+                url: 'user-sessions-view',
                 xtype: 'usersessionview',
               }
             ]

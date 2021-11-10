@@ -14,6 +14,7 @@ Ext.define('DashboardApp.store.Sessions',{
       rootProperty: 'sessions',
       totalProperty: 'totalCount'
     },
+    autoLoad: true,
 
 
   }

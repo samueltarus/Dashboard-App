@@ -15,6 +15,8 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
     routes: {
         'server-requests': 'onServerUrlActivated',
         'statistics': 'onStatisticsActivated',
+        'user-sessions-view': 'onUserSessionViewActivated',
+
       },
 
       
@@ -24,6 +26,9 @@ Ext.define('DashboardApp.view.base.MainViewPortController', {
 
     onStatisticsActivated: function() {
         this.showView("Log Statistics", "groupedgrid", "fa fa-list-alt");
+      },
+      onUserSessionViewActivated: function() {
+        this.showView("User Sessions", "usersessionview", "fa fa-list-alt");
       },
 
 

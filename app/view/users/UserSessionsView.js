@@ -8,7 +8,10 @@ Ext.define('DashboardApp.view.users.UserSessionsView',{
   title: 'User sessions',
   width: 600,
   height: 400,
-
+  
+  store: {
+    type: 'sessions'
+},
   bind: '{sessions}',
   collapsible: true,
   collapseFirst: false,
@@ -39,7 +42,7 @@ Ext.define('DashboardApp.view.users.UserSessionsView',{
 
   columns: [
     {
-      text: 'userId',
+      text: 'user Id',
       dataIndex: 'userId',
       flex: 1
     },
@@ -57,6 +60,28 @@ Ext.define('DashboardApp.view.users.UserSessionsView',{
       text: 'last Login',
       dataIndex: 'lastLogin',
       flex: 1
+    },
+    {
+      text: 'Method Submitted',
+      dataIndex: 'submitMethod',
+      flex: 1
+    },
+    {
+      text: 'Client Port No',
+      dataIndex: 'cientPortNo',
+      flex: 1
+    }, {
+      text: 'Server Port Number',
+      dataIndex: 'serverPortNo',
+      flex: 1
+    }, {
+      text: 'Ip Address',
+      dataIndex: 'ipAddress',
+      flex: 1
+    }, {
+      text: 'Status Code',
+      dataIndex: 'status',
+      flex: 1
     }
   ],
 
@@ -73,9 +98,9 @@ Ext.define('DashboardApp.view.users.UserSessionsView',{
       groupBy: null
     },
     stores: {
-      requests: {
+      sessions: {
         type: 'sessions',
-        autoLoad: true,
+        autoLoad: true,                
         listeners: {
           groupchange: 'onGroupChange',
           buffer: 100
