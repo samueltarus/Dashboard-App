@@ -1,4 +1,4 @@
-Ext.define('DashboardApp.view.DashboardGridRequestView',{
+Ext.define('DashboardApp.view.requests.RequestGridView',{
     extend: 'Ext.grid.Panel',
     xtype: 'dashboardgridview',
     // xtype: 'expander-lockable',
