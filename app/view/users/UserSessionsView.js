@@ -98,10 +98,6 @@ Ext.define('DashboardApp.view.users.UserSessionsView',{
       filter: {
         type: 'list',
         loadOnShow:true,
-        // itemDefaults: {
-        //
-        //   emptyText: 'Search for...'
-        // }
       }
     },
     {
@@ -150,7 +146,7 @@ Ext.define('DashboardApp.view.users.UserSessionsView',{
     {
       ftype: 'grouping',
       startCollapsed: true,
-      groupHeaderTpl: '{columnName}: {browser} ({rows.length} Item{[values.rows.length > 1 ? "s" : ""]})'
+      groupHeaderTpl: '{columnName}: {browser} ({rows.length} User{[values.rows.length > 1 ? "s" : ""]})'
     }
   ],
 

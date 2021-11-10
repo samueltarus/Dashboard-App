@@ -25,7 +25,7 @@ Ext.define('DashboardApp.view.users.UserSessionsViewController',{
         groupBy = grouper ? grouper.getProperty() : '',
         groupsBtn = me.lookup('groupsBtn'),
         vm = me.getViewModel(),
-        groups, items, menu,
+        groups, users, menu,
         len, i;
 
     me.groupBy = groupBy;
@@ -42,10 +42,10 @@ Ext.define('DashboardApp.view.users.UserSessionsViewController',{
       if (groupsBtn.groupBy !== groupBy) {
         groupsBtn.groupBy = groupBy;
         groups = store.getGroups();
-        items = [];
+        users = [];
 
         groups.each(function (group) {
-          items.push({
+          users.push({
             xtype: 'menucheckitem',
             text: group.getGroupKey(),
             handler: 'onToggleGroup'
@@ -53,20 +53,20 @@ Ext.define('DashboardApp.view.users.UserSessionsViewController',{
         });
 
         menu.removeAll(true);
-        if (items.length) {
-          menu.add(items);
+        if (users.length) {
+          menu.add(users);
         }
 
       }
-      items = menu.items.items;
-      for (i = 0, len = items.length; i < len; ++i) {
-        items[i].setChecked(groupingFeature.isExpanded(items[i].text));
+      users = menu.items.items;
+      for (i = 0, len = users.length; i < len; ++i) {
+        users[i].setChecked(groupingFeature.isExpanded(users[i].text));
       }
 
     }
   },
-  onToggleGroup: function (item) {
-    this.groupingFeature[item.checked ? 'expand' : 'collapse'](item.text, {
+  onToggleGroup: function (user) {
+    this.groupingFeature[user.checked ? 'expand' : 'collapse'](user.text, {
       highlight: true
     });
   },
@@ -81,12 +81,12 @@ Ext.define('DashboardApp.view.users.UserSessionsViewController',{
 
   syncGroup: function (groupName, state) {
     var groupsBtn = this.lookup('groupsBtn'),
-    items = groupsBtn.menu.items.items,
+    users = groupsBtn.menu.users.users,
     i;
 
-    for (i = items.length; i-- > 0; ) {
-      if (items[i].text === groupName) {
-        items[i].setChecked(state, true);
+    for (i = users.length; i-- > 0; ) {
+      if (users[i].text === groupName) {
+        users[i].setChecked(state, true);
         break;
       }
     }
