@@ -4,11 +4,17 @@ Ext.define('DashboardApp.view.base.MainViewPort', {
     layout: 'border',
     controller: 'mainviewportcontroller',
 
+    viewModel: {
+      type: 'mainviewmodel'
+    },
+
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
+        'DashboardApp.view.base.Footer'
     ],
       plugins: 'viewport',
+
     items: [{
             region: 'north',
             border: false,
@@ -31,6 +37,7 @@ Ext.define('DashboardApp.view.base.MainViewPort', {
             {
                 text: 'logout',
                 xtype: 'button',
+                iconCls: 'fa fa-sign-out fa-lg buttonIcon',
                 listeners: {
                     click: 'onLogoutClick'
                 }
@@ -65,11 +72,12 @@ Ext.define('DashboardApp.view.base.MainViewPort', {
             region: 'south',
             collapsible: true,
             titleAlign: 'center',
-            html: 'Welcome to innovative and growing advance technology company',
-            title: '=>' + "| Developed By Hanson Tarus",
+            xtype: 'appfooter',
+            // html: 'Welcome to innovative and growing advance technology company',
+            // title: '=>' + "| Developed By Hanson Tarus",
             split: true,
-            height: 100,
-            minHeight: 100
+            height: 25,
+            minHeight: 25
         },
         // {
         //     region: 'east',
