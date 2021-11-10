@@ -1,6 +1,8 @@
-Ext.define('DashboardApp.view.DashboardGridRequestView',{
+Ext.define('DashboardApp.view.requests.RequestGridView',{
     extend: 'Ext.grid.Panel',
     xtype: 'dashboardgridview',
+    // xtype: 'expander-lockable',
+    enableLocking: true,
     // controller: 'dashboardgridviewcontroller',
     scrollable: true,
     border: true, 
@@ -11,7 +13,8 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
     frame: true,
     title: 'Server Responses',
     iconCls: 'icon-grid',
-    plugins: {
+    
+    plugins: {        
         gridfilters: true,
             cellediting: {
                 clicksToEdit: 1
@@ -76,6 +79,22 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
             value: new Date(),
             align: 'left',
             margin: '0 0 0 0',
+        },  
+         { 
+            xtype: 'button', 
+            text: 'Export', 
+            reference: 'exportButton', 
+            handler: function(button) {
+                console.log("BUTTON");
+                let grid = Ext.ComponentQuery.query('grid')[0];
+                console.log("GRID %o", grid);
+                grid.saveDocumentAs({
+                    type: 'xlsx',
+                    charset: 'Shift-JIS',
+                    title: 'Response Server',
+                    fileName: 'sample.xlsx'
+                });
+            }
         },
         {
             xtype: 'combobox',
@@ -177,4 +196,17 @@ Ext.define('DashboardApp.view.DashboardGridRequestView',{
         xtype: 'pagingtoolbar',
         displayInfo: true
     },
+    plugins: [{
+        ptype: 'rowexpander',
+        rowBodyTpl : new Ext.XTemplate(
+            '<p><b>IP:</b> {IP}</p>',
+            '<p><b>URL:</b> {change:this.formatChange}</p><br>',
+            '<p><b>Status:</b> {Status}</p>',
+        {
+            formatChange: function(v){
+                var color = v >= 0 ? 'green' : 'red';
+                return '<span style="color: ' + color + ';">' + Ext.util.Format.usMoney(v) + '</span>';
+            }
+        })
+    }],
 });
