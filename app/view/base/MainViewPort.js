@@ -84,7 +84,7 @@ Ext.define('DashboardApp.view.base.MainViewPort', {
             xtype: 'tabpanel', // TabPanel itself has no title
             activeTab: 0,
             items: [{
-                // xtype: 'dashboardgridview'
+                xtype: 'dashboardgridview'
             }]
 
         }

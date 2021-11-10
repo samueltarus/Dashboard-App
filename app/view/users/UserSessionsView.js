@@ -3,12 +3,18 @@ Ext.define('DashboardApp.view.users.UserSessionsView',{
   controller:'usersessionviewcontroler',
   xtype: 'usersessionview',
   requires: [
-      'Ext.grid.feature.Grouping'
+      'Ext.grid.feature.Grouping',
+      'Ext.grid.filters.Filters',
   ],
+  plugins: {
+    gridfilters: true
+  },
+  emptyText: 'No Matching Records',
+  loadMask: true,
   title: 'User sessions',
   width: 600,
   height: 400,
-  
+
   store: {
     type: 'sessions'
 },
@@ -44,44 +50,99 @@ Ext.define('DashboardApp.view.users.UserSessionsView',{
     {
       text: 'user Id',
       dataIndex: 'userId',
-      flex: 1
+      flex: 1,
+      filter:{
+
+        type: 'string',
+        loadOnShow: true,
+        itemDefaults: {
+          emptyText: 'Search..'
+        }
+      }
     },
     {
       text: 'username',
       dataIndex: 'username',
-      flex: 1
+      flex: 1,
+      filter:{
+
+        type: 'string',
+        loadOnShow: true,
+        itemDefaults: {
+          emptyText: 'Search..'
+        }
+      }
     },
     {
       text: 'browser',
       dataIndex: 'browser',
-      flex: 1
+      flex: 1,
+      loadingText: 'Loading records ',
+      filter: {
+
+        type: 'list',
+        loadOnShow:true,
+      }
     },
     {
+      xtype: 'datecolumn',
       text: 'last Login',
       dataIndex: 'lastLogin',
-      flex: 1
+      flex: 1,
+      filter: true,
     },
     {
       text: 'Method Submitted',
       dataIndex: 'submitMethod',
-      flex: 1
+      flex: 1,
+      filter: {
+        type: 'list',
+        loadOnShow:true,
+        // itemDefaults: {
+        //
+        //   emptyText: 'Search for...'
+        // }
+      }
     },
     {
       text: 'Client Port No',
       dataIndex: 'cientPortNo',
-      flex: 1
+      flex: 1,
+      filter: {
+        type: 'string',
+        loadOnShow:true,
+        itemDefaults: {
+          emptyText: 'Search for.....'
+        }
+      }
     }, {
       text: 'Server Port Number',
       dataIndex: 'serverPortNo',
-      flex: 1
+      flex: 1,
+      filter: {
+        type: 'string',
+        loadOnShow:true,
+        itemDefaults: {
+          emptyText: 'Search for.....'
+        }
+      }
     }, {
       text: 'Ip Address',
       dataIndex: 'ipAddress',
-      flex: 1
+      flex: 1,
+      filter: {
+        type: 'string',
+        loadOnShow:true,
+        itemDefaults: {
+          emptyText: 'Search for.....'
+        }
+      }
+
     }, {
       text: 'Status Code',
       dataIndex: 'status',
-      flex: 1
+      flex: 1,
+      filter: 'number',
     }
   ],
 
@@ -100,7 +161,7 @@ Ext.define('DashboardApp.view.users.UserSessionsView',{
     stores: {
       sessions: {
         type: 'sessions',
-        autoLoad: true,                
+        autoLoad: true,
         listeners: {
           groupchange: 'onGroupChange',
           buffer: 100

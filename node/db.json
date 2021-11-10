@@ -12,7 +12,7 @@
 			"userId":1,
 			"username":"samuel",
 			"browser":"mozilla",
-			"lastLogin":"29/11/2017:14:33:22",
+			"lastLogin":"29/11/2017",
 			"submitMethod":"POST",
 			"cientPortNo": 3300,
 			"serverPortNo": 8090,
@@ -20,11 +20,11 @@
 			"status":200
 	},
 	{
-			
+
 		"userId":2,
 		"username":"Nancy",
 		"browser":"chrome",
-		"lastLogin":"29/11/2021:14:33:22",
+		"lastLogin":"29/11/2021",
 		"submitMethod":"GET",
 		"cientPortNo": 3306,
 		"serverPortNo": 8080,
@@ -32,11 +32,11 @@
 		"status":300
 },
 {
-			
+
 	"userId":3,
 	"username":"Hanson",
 	"browser":"mozilla",
-	"lastLogin":"29/10/2021:14:33:22",
+	"lastLogin":"29/10/2021",
 	"submitMethod":"POST",
 	"cientPortNo": 3350,
 	"serverPortNo": 9000,
@@ -44,11 +44,11 @@
 	"status":304
 },
 {
-			
+
 	"userId":4,
 	"username":"Odikor",
 	"browser":"firefox",
-	"lastLogin":"29/10/2020:14:33:22",
+	"lastLogin":"29/10/2020",
 	"submitMethod":"GET",
 	"cientPortNo": 3306,
 	"serverPortNo": 8080,
@@ -56,11 +56,11 @@
 	"status":200
 },
 {
-			
+
 	"userId":5,
 	"username":"kelvin",
 	"browser":"explorer",
-	"lastLogin":"29/11/2019:14:33:22",
+	"lastLogin": "29/11/2019",
 	"submitMethod":"GET",
 	"cientPortNo": 3306,
 	"serverPortNo": 9000,
@@ -68,11 +68,11 @@
 	"status":400
 },
 {
-			
+
 	"userId":6,
 	"username":"victor",
 	"browser":"chrome",
-	"lastLogin":"29/10/2019:14:33:22",
+	"lastLogin":"29/10/2019",
 	"submitMethod":"POST",
 	"cientPortNo": 3306,
 	"serverPortNo": 8080,
@@ -82,7 +82,7 @@
 	"userId": 7,
 	"username": "dickson",
 	"browser": "mozilla",
-	"lastLogin": "29/11/2019:14:33:22",
+	"lastLogin": "29/11/2019",
 	"submitMethod": "POST",
 	"cientPortNo": 3030,
 	"serverPortNo": 8080,
@@ -294,5 +294,5 @@
 		}
 
 	]
-	
+
 }

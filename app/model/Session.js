@@ -4,19 +4,43 @@ Ext.define('DashboardApp.model.Session',{
       'Ext.data.summary.Average'
   ],
   fields: [
-    'userId',
-    'username',
-    'browser',
-    'lastLogin',
-    'submitMethod',
-    'cientPortNo',
-    'serverPortNo',
-    'ipAddress',
-    'status',
     {
-        name: 'rating',
-        summary: 'average'
-    }
-    
+      name: 'userId',
+      type: 'int'
+    },
+    {
+      name: 'username',
+      type: 'string'
+    },
+    {
+      name: 'browser',
+      type: 'string'
+    },
+    {
+      name: 'lastLogin',
+      type: 'date',
+      dateFormat: 'd/m/Y'
+    },
+    {
+      name: 'submitMethod',
+      type: 'string'
+    },
+    {
+      name: 'cientPortNo',
+      type: 'string'
+    },
+    {
+      name: 'serverPortNo',
+      type: 'string'
+    },
+    {
+      name: 'ipAddress',
+      type: 'string'
+    },
+    {
+      name: 'status',
+      type: 'number'
+    },
+
   ]
 });
