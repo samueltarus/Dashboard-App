@@ -24,7 +24,6 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
       {
         xtype: 'form',
         layout: 'form',
-        reference: 'form',
         bodyPadding: 10,
         defaultType: 'textfield',
         reference: 'login-form',
