@@ -49,12 +49,12 @@ Ext.define('DashboardApp.view.auth.LoginFormController', {
     onRegisterClick: function () {
       Ext.widget('usersform');
     },
-    onCancel: function () {
-      
-      let me = this
-      me.lookupReference('form').reset();
-      
-      console.log("cancel is clicked");
+    onCancelClick: function () {
+
+      let me = this;
+      let view = me.getView();
+      let form = view.lookupReference('login-form').getForm();
+      form.reset();
     }
 
 });
