@@ -23,18 +23,19 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
       {
         xtype: 'form',
         layout: 'form',
+        reference: 'form',
         bodyPadding: 10,
         defaultType: 'textfield',
         reference: 'login-form',
 
         items: [{
-           allowBlank: false,
            fieldLabel: 'Username',
            name: 'username',
            vtype: 'alphanum',
            emptyText: 'username',
            msgTarget: 'under',
            maxLength: 25,
+           allowBlank: false,
            minLength:5,
     }, {
            allowBlank: false,
@@ -51,18 +52,12 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
     ],
 
 buttons: [
-    {
-      xtype: 'translation',
-      iconCls:'fas fa-flag-usa',
-      text: 'language'
-    },
-    // {
-    //   xtype: 'tbfill'
-    // },
+    
     {
       text: 'Cancel',
       handler: 'onCancelClick',
-      iconCls: 'fas fa-times'
+      iconCls: 'fas fa-times',
+      handler: 'onCancel'
     },
     {
       text: 'Register',
@@ -72,8 +67,10 @@ buttons: [
     {
       text: 'Login',
       formBind: true,
-       iconCls: 'fas fa-sign-in-alt',
-      handler: 'onLoginClick',
+      iconCls: 'fas fa-sign-in-alt',
+      listeners: {
+        click: 'onLoginClick'
+    },
       iconCls: 'fas fa-sign-in-alt',
     },
 ],

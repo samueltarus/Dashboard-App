@@ -41,25 +41,7 @@ Ext.define('DashboardApp.view.requests.RequestGridView',{
     // title: 'Comments Management',
     
     
-    tbar: [{
-            text: 'Add  Request',
-            handler: 'addCommentButtonClick',
-        },
-        {
-            text: 'Edit  Request',
-            handler: 'editCommentButtonClick',
-            bind: {
-                disabled: '{!commentviewgrid.selection}'
-            },
-        }, {
-            text: 'Delete  Request',
-            itemId: 'btnDelete',
-            formBind: true,
-            handler: 'deleteCommentButtonClick',
-        }, {
-            text: 'Refresh  Request',
-            handler: 'refreshCommentButtonClick',
-        }, {
+    tbar: [ {
             fieldLabel: 'Start',
             labelWidth: 60,
             allowBlank: false,
@@ -101,8 +83,9 @@ Ext.define('DashboardApp.view.requests.RequestGridView',{
             width: 200,
             editable: false,
             align: 'left',
-            store: ['Active', 'Inactive', 'Suspended', 'Deleted'],
+            store: ['200', '400', '304', '500'],
             value: 'Select type',
+            
             // width: 100,
 
         },
