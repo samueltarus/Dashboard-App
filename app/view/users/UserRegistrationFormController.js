@@ -1,6 +1,6 @@
-Ext.define('DashboardApp.view.users.UserForm',{
+Ext.define('DashboardApp.view.users.UserRegistrationFormController',{
   extend: 'Ext.app.ViewController',
-  alias: 'controller.userformcontroller',
+  alias: 'controller.userregistrationformcontroller',
   onSaveClicked: function(){
 
     var me = this,

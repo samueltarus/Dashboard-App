@@ -1,7 +1,7 @@
-Ext.define('DashboardApp.view.users.UserForm', {
+Ext.define('DashboardApp.view.users.UserRegistrationForm', {
     extend: 'Ext.window.Window',
     xtype: 'usersform',
-    controller: 'userformcontroller',
+    controller: 'userregistrationformcontroller',
 
     title: 'USER REGISTRATION FORM',
     bodyPadding: "5 5 0",

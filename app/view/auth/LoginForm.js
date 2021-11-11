@@ -10,6 +10,7 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
     title: 'Login',
     frame: true,
     width: 520,
+    closable:false,
     autoShow: true,
     iconCls: 'fa fa-key fa-lg',
     bodyPadding: 30,
@@ -51,16 +52,16 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
     ],
 
 buttons: [
-    {
-      xtype: 'translation',
-      iconCls:'fas fa-flag-usa',
-      text: 'language'
-    },
+    // {
+    //   xtype: 'translation',
+    //   iconCls:'fas fa-flag-usa',
+    //   text: 'language'
+    // },
     // {
     //   xtype: 'tbfill'
     // },
     {
-      text: 'Cancel',
+      text: 'Reset',
       handler: 'onCancelClick',
       iconCls: 'fas fa-times'
     },

@@ -11,7 +11,8 @@ Ext.define('DashboardApp.view.base.MainViewPort', {
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
-        'DashboardApp.view.base.Footer'
+        'DashboardApp.view.base.Footer',
+        'DashboardApp.view.base.Header',
     ],
       plugins: 'viewport',
 
@@ -20,6 +21,7 @@ Ext.define('DashboardApp.view.base.MainViewPort', {
             border: false,
             margin: '0 0 5 0',
             title: 'GOSM =>' + "| Developed By Hanson Tarus",
+            // xtype: 'appheader',
         tbar: [
             {
                 fieldLabel: 'Status',

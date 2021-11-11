@@ -51,7 +51,7 @@ Ext.define('DashboardApp.store.Menu', {
                 text: 'Status codes summary',
                 leaf: true,
                 url: 'Code Summary',
-                iconCls: 'fas fa-superscript',
+                iconCls: 'fab fa-firefox-browser',
                 xtype:'statuscodesfilter',
               }
             ]

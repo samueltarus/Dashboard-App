@@ -46,7 +46,11 @@ Ext.define('DashboardApp.view.auth.LoginFormController', {
       Ext.widget('usersform');
     },
     onCancelClick: function () {
-      console.log("cancel is clicked");
+
+      let me = this;
+      let view = me.getView();
+      let form = view.lookupReference('login-form').getForm();
+      form.reset();
     }
 
 });
