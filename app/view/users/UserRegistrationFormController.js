@@ -3,9 +3,9 @@ Ext.define('DashboardApp.view.users.UserRegistrationFormController',{
   alias: 'controller.userregistrationformcontroller',
   onSaveClicked: function(){
 
-    var me = this,
-    window = me.getView(),
-    form = window.lookupReference('add-form').getForm();
+    var me = this;
+    let window = me.getView();
+    let form = window.lookupReference('add-form').getForm();
 var id = form.findField('id').getValue();
 var url = 'http://localhost:3000/users/'; //POST
 var method = 'POST';

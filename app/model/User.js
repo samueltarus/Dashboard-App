@@ -1,7 +1,12 @@
 Ext.define('DashboardApp.model.User', {
     extend: 'Ext.data.Model',
 
-    fields: [{
+    fields: [
+      {
+        name: 'id',
+        type: 'int',
+      },
+    {
         name: 'first',
         type: 'string'
     },

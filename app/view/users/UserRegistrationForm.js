@@ -19,12 +19,12 @@ Ext.define('DashboardApp.view.users.UserRegistrationForm', {
         flex: 1,
         layout: 'anchor'
     },
-    reference: 'add-form',
     jsonSubmit: true,
 
     layout: 'hbox',
 
     items: [{
+      reference: 'add-form',
         items: [{
             xtype: 'textfield',
             fieldLabel: 'First Name',

@@ -55,34 +55,35 @@ Ext.define('DashboardApp.store.Menu', {
                 xtype:'statuscodesfilter',
               }
             ]
-          }, {
-            text: 'Charts',
-            expanded: false,
-            iconCls: 'fad fa-calculator',
-            children: [
-              {
-                text: 'Request Chart',
-                leaf: true,
-                url: 'request-chart',
-                iconCls: 'fas fa-superscript',
-                xtype: 'chart',
-              },
-              {
-                text: 'Logs Chart',
-                leaf: true,
-                iconCls: 'fas fa-superscript',
-                url: 'log-chart',
-                xtype:'statuscodesfilter',
-              },
-              {
-                text: 'User Sessions',
-                leaf: true,
-                iconCls: 'fas fa-superscript',
-                url: 'user-sessions-pie-chart',
-                xtype:'pie-basic',
-              }
-            ]
           },
+          // {
+          //   text: 'Charts',
+          //   expanded: false,
+          //   iconCls: 'fad fa-calculator',
+          //   children: [
+          //     {
+          //       text: 'Request Chart',
+          //       leaf: true,
+          //       url: 'request-chart',
+          //       iconCls: 'fas fa-superscript',
+          //       xtype: 'chart',
+          //     },
+          //     {
+          //       text: 'Logs Chart',
+          //       leaf: true,
+          //       iconCls: 'fas fa-superscript',
+          //       url: 'log-chart',
+          //       xtype:'statuscodesfilter',
+          //     },
+          //     {
+          //       text: 'User Sessions',
+          //       leaf: true,
+          //       iconCls: 'fas fa-superscript',
+          //       url: 'user-sessions-pie-chart',
+          //       xtype:'pie-basic',
+          //     }
+          //   ]
+          // },
           {
             text: 'User sessions',
             expanded: false,
