@@ -1,26 +1,11 @@
 Ext.define('DashboardApp.view.users.UserRegistrationFormController',{
   extend: 'Ext.app.ViewController',
   alias: 'controller.userregistrationformcontroller',
-<<<<<<< HEAD
-  onSaveClicked: function(){
 
-    var me = this;
-    let window = me.getView();
-    let form = window.lookupReference('add-form').getForm();
-var id = form.findField('id').getValue();
-var url = 'http://localhost:3000/users/'; //POST
-var method = 'POST';
-console.log(id);
-if (id) {
-    url += id;
-    method = 'PUT';
-}
-=======
   onSaveClicked: function(){var me = this,
     window = me.getView(),
-    
+
         form = window.lookupReference('add-form').getForm();
->>>>>>> f64c76c116521dbe6962e1bd89ac1c7edb1b9214
 
         var id = form.findField('id').getValue();
         var url = `http://localhost:3000/users`;
@@ -64,7 +49,7 @@ if (id) {
 
         },
         onLoginClick: function () {
-            
+
             this.getView().destroy();
             Ext.widget('loginform');
           },
