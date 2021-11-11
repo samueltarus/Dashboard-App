@@ -19,12 +19,16 @@ Ext.define('DashboardApp.view.users.UserRegistrationForm', {
         flex: 1,
         layout: 'anchor'
     },
-    reference: 'add-form',
-    jsonSubmit: true,
-
     layout: 'hbox',
+    
 
     items: [{
+        reference: 'add-form',
+        jsonSubmit: true,
+        
+        // xtype: 'form',
+        bodyPadding: 10,
+        defaultType: 'textfield',
         items: [{
             xtype: 'textfield',
             fieldLabel: 'First Name',
@@ -38,13 +42,14 @@ Ext.define('DashboardApp.view.users.UserRegistrationForm', {
             minLength: 5,
             name: 'username',
             vtype: 'alphanum',
-            maxLength: 8,
+            maxLength: 20,
         },
         {
           xtype: 'textfield',
           fieldLabel: 'password',
           anchor: '-5',
           name: 'password',
+          inputType: 'password',
           vtype: 'customPass'
         }
       ]
@@ -66,6 +71,7 @@ Ext.define('DashboardApp.view.users.UserRegistrationForm', {
           xtype: 'textfield',
           fieldLabel: 're-type password',
           anchor: '-5',
+          inputType: 'password',
           vtype: 'password',
           name: 'repassword',
         }
@@ -78,5 +84,9 @@ Ext.define('DashboardApp.view.users.UserRegistrationForm', {
     }, {
         text: 'Cancel',
         handler: 'onCancelClick'
-    }]
+    },
+    {   text: 'Login',
+        handler: 'onLoginClick',
+        iconCls: 'fas fa-user-plus'
+       },]
 });
