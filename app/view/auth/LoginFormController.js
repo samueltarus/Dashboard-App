@@ -45,6 +45,7 @@ Ext.define('DashboardApp.view.auth.LoginFormController', {
     onRegisterClick: function () {
       Ext.widget('usersform');
     },
+    
     onCancelClick: function () {
 
       let me = this;
