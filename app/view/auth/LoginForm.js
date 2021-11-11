@@ -64,7 +64,6 @@ buttons: [
       text: 'Reset',
       handler: 'onCancelClick',
       iconCls: 'fas fa-times',
-      handler: 'onCancel'
     },
     {
       text: 'Register',
