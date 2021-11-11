@@ -7,8 +7,10 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
       'Ext.form.Panel'
   ],
 
-    title: 'Login',
     frame: true,
+    closable: false,
+    autoShow: true,
+    titleAlign: 'center',
     width: 520,
     closable:false,
     autoShow: true,
@@ -17,6 +19,8 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
     layout: {
       type: 'fit'
     },
+    title: 'Login : Provide Credentials to Login',      
+
     store: {
       type: 'users'
     },
@@ -38,14 +42,15 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
            allowBlank: false,
            minLength:5,
     }, {
-           allowBlank: false,
            fieldLabel: 'Password',
            name: 'password',
            vtype: 'alphanum',
            maxLength: 15,
            minLength: 5,
            emptyText: 'password',
-           inputType: 'password'
+           inputType: 'password',
+           allowBlank: false,
+
     }
     ]
       }
