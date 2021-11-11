@@ -6,6 +6,7 @@ Ext.define('DashboardApp.view.auth.LoginFormController', {
     ],
     onLoginClick: function(btn) {
       var me = this,
+     
           i = 0,
           fn, val;
       var window = me.getView();
@@ -14,11 +15,9 @@ Ext.define('DashboardApp.view.auth.LoginFormController', {
       var model = me.getViewModel();
       var username = form.findField('username').getValue();
       var password = form.findField('password').getValue();
-
-      me.showProgressBar(btn);
-
-      // Fake progress fn
-      fn = function() {
+      
+        console.log()
+        fn = function() {
           me.timer = null;
           ++i;
 
@@ -37,12 +36,18 @@ Ext.define('DashboardApp.view.auth.LoginFormController', {
           }
       };
 
+      me.showProgressBar(btn);
+
+      // Fake progress fn
+      
+
       me.timer = Ext.defer(fn, 500);
     },
     loginLogic: function (username, password) {
 
     },
     onRegisterClick: function () {
+      this.getView().destroy();
       Ext.widget('usersform');
     },
     

@@ -7,8 +7,10 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
       'Ext.form.Panel'
   ],
 
-    title: 'Login',
     frame: true,
+    closable: false,
+    autoShow: true,
+    titleAlign: 'center',
     width: 520,
     closable:false,
     autoShow: true,
@@ -17,6 +19,8 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
     layout: {
       type: 'fit'
     },
+    title: 'Login : Provide Credentials to Login',      
+
     store: {
       type: 'users'
     },
@@ -29,23 +33,24 @@ Ext.define('DashboardApp.view.auth.LoginForm',{
         reference: 'login-form',
 
         items: [{
-           allowBlank: false,
            fieldLabel: 'Username',
            name: 'username',
            vtype: 'alphanum',
            emptyText: 'username',
            msgTarget: 'under',
            maxLength: 25,
+           allowBlank: false,
            minLength:5,
     }, {
-           allowBlank: false,
            fieldLabel: 'Password',
            name: 'password',
            vtype: 'alphanum',
            maxLength: 15,
            minLength: 5,
            emptyText: 'password',
-           inputType: 'password'
+           inputType: 'password',
+           allowBlank: false,
+
     }
     ]
       }
@@ -63,7 +68,7 @@ buttons: [
     {
       text: 'Reset',
       handler: 'onCancelClick',
-      iconCls: 'fas fa-times'
+      iconCls: 'fas fa-times',
     },
     {
       text: 'Register',
@@ -73,8 +78,10 @@ buttons: [
     {
       text: 'Login',
       formBind: true,
-       iconCls: 'fas fa-sign-in-alt',
-      handler: 'onLoginClick',
+      iconCls: 'fas fa-sign-in-alt',
+      listeners: {
+        click: 'onLoginClick'
+    },
       iconCls: 'fas fa-sign-in-alt',
     },
 ],
